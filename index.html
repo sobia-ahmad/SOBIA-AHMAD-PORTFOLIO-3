@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sobia's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,400&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+  <!--Navbar and hamburger menu-->
+
+  <nav role="navigation">
+    <div id="menuToggle">
+
+      <input type="checkbox" />
+
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+
+      <ul id="menu">
+        <a href="#home">
+          <li>HOME</li>
+        </a>
+        <a href="#about-area">
+          <li>ABOUT</li>
+        </a>
+        <a href="#skills-area">
+          <li>SKILLS</li>
+        </a>
+        <a href="#portfolio-area">
+          <li>PORTFOLIO</li>
+        </a>
+        <a href="#contact-area">
+          <li>CONTACT</li>
+        </a>
+        <a href="https://www.github.com/sobia-ahmad" target="_blank">
+          <li>GITHUB</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!--Ocean video background-->
+  <div id="home" class="background-banner">
+    <!--- <video playsinline autoplay muted loop> -->
+    <!-- <source  src="bluey-ocean.mp4" type="video/mp4"> -->
+    <!--- </video> -->
+    <!--Introductory content on homepage-->
+    <div class="intro-content">
+      <h1>Sobia Ahmad</h1>
+      <h3>Front-End Developer</h3>
+      <p><b>HTML5 - CSS3 - JavaScript</b></p>
+    </div>
+  </div>
+  </header>
+
+  <!--About me section-->
+  <main id="about-area" class="about">
+    <h2>About Me</h2>
+    <p>I'm Sobia. I am a creative and optimistic individual. I feel immensely
+      passionate about turning ideas into a visual reality - that's what appeals to me about working on the front-end,
+      specifically. I enjoy meeting new people and challenging myself.</p>
+
+    <p>Away from work, I adore drawing and having games nights with my friends! I adore superheroes
+      but believe the best ones are human beings - their heart makes them super. I can complete a rubix cube in 7 and a
+      1/2 hours. I like sunsets. If you'd like to know anything else please feel free to ask me.
+  </main>
+  </p>
+
+
+
+
+
+
+  </main>
+
+
+
+  <section>
+    <!--Skills section-->
+    <div id="skills-area" class="skills skills-title">
+      <h2>Skills</h2>
+      <li>
+        <h3>HTML5</h3><span class="bar"><span class="html5"></span><span>
+      </li>
+
+      <li>
+        <h3>CSS3</h3><span class="bar"><span class="css3"></span><span>
+      </li>
+
+      <li>
+        <h3>JavaScript ES6</h3><span class="bar"><span class="javascript"></span><span>
+      </li>
+
+      <li>
+        <h3>Node.js</h3><span class="bar"><span class="node"></span><span>
+      </li>
+
+      <li>
+        <h3>React</h3><span class="bar"><span class="react"></span><span>
+      </li>
+
+
+      <li>
+        <h3>Vue.js</h3><span class="bar"><span class="vue"></span><span>
+      </li>
+
+      <li>
+        <h3>Photoshop CS6</h3><span class="bar"><span class="photoshop"></span><span>
+      </li><br><br><br>
+    </div>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!--Portfolio-->
+  <!--Portfolio gallery - list of projects-->
+  <section>
+    <div id="portfolio-area" class="portfolio-intro portfolio">
+      <h2>Portfolio</h2>
+      <p>You're welcome to browse my projects below...</p>
+      <div class="image-wrapper">
+        <div class="media">
+          <div class="overlay"></div>
+          <img src="jetflix-cover copy-1.png" alt="">
+          <div class="image-details">
+            <p><br>JETFLIX HOME<span>|JAVASCRIPT|</span></p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="overlay"></div>
+          <img src="jetflix-cover copy-1.png" alt="">
+          <div class="image-details">
+            <p><br>CAMERA APP <span>|JAVASCRIPT| |VUE|</span></p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="overlay"></div>
+          <img src="jetflix-cover copy-1.png">
+          <div class="image-details">
+            <p><br>SOBIFY APP<span>|JAVASCRIPT| |REACT|</span></p>
+
+          </div>
+        </div>
+
+        <div class="image-wrapper">
+          <div class="media">
+            <div class="overlay"></div>
+            <img src="jetflix-cover copy-1.png" alt="">
+            <div class="image-details">
+              <p><br>CHAT APP <span>|JAVASCRIPT| |REACT|</span></p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="overlay"></div>
+            <img src="jetflix-cover copy-1.png" alt="">
+            <div class="image-details">
+              <p><br>MOVIE DATABASE <span>|JAVASCRIPT| |REACT|</span></p>
+            </div>
+          </div>
+          <div class="media">
+            <div class="overlay"></div>
+            <img src="jetflix-cover copy-1.png">
+            <div class="image-details">
+              <p><br>GROCERY SHOP WEBSITE <span>|JAVASCRIPT|</span></p>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+  </section>
+  </section>
+
+  <!--Contact form-->
+  <nav>
+    <form id="contact-area" class="labels">
+      <h1>Contact Me</h1><br>
+      <label for="name">Name</label>
+      <input name="name" type="text" required class="feedback-input" placeholder="What's your name?">
+      <label for="email">Email</label>
+      <input name="email" type="email" required class="feedback-input" placeholder="hello@example.com">
+      <label for="mobile">Mobile</label>
+
+      <input name="mobile" type="number" required class="feedback-input" placeholder="(+44)">
+      <label for="message">Message</label>
+      <div class="status">
+
+      </div>
+      <textarea name="text" required class="feedback-input" minlength="8" rows="8" cols="20"
+        placeholder="Please enter your message..."></textarea>
+      <input type="submit" value="Send" />
+    </form>
+  </nav>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

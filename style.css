@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,400&display=swap");
+
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: rgba(11, 106, 170, 0.445);
+  background: rgb(255, 255, 255);
+  font-family: "Titillium Web", sans-serif;
+}
+
+.background-banner {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.background-banner video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.background-banner .intro-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.background-banner .intro-content h1 {
+  font-size: 7em;
+  color: rgb(255, 255, 255);
+  text-transform: none;
+}
+
+.background-banner .intro-content h3 {
+  font-size: 2.5em;
+  bottom: 50%;
+  color: rgb(4, 240, 240);
+  text-transform: none;
+}
+
+.background-banner .intro-content p {
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+}
+
+.background-banner {
+  background: linear-gradient(270deg, #0b6aaa, #04f0f0, #ffffff, #03c8d8);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+
+/* Hamburger toggle menu sections */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: rgba(22, 169, 214, 0.75);
+
+  transition: color 0.4s ease;
+}
+
+#menuToggle a:hover {
+  color: rgb(4, 240, 240);
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: rgba(11, 106, 170, 0.445);
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: rgba(22, 169, 214, 0.75);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ffffffcc;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+/* Navbar and menu */
+
+:root {
+  --primary-color: rgb(4, 240, 240);
+  --overlay-color: rgba(77, 77, 77, 0.75);
+  --menu-speed: 0.75s;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  position: relative;
+}
+
+.showcase:before {
+  content: "";
+  background: url("bluey-ocean.gif");
+  background-size: cover, no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* About */
+
+.about {
+  font-size: 40px;
+}
+
+/* Skills */
+
+p {
+  font-size: 25px;
+  text-align: middle;
+}
+
+h2 {
+  color: rgba(22, 169, 214, 0.75);
+  font-size: 55px;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  font-family: "Titillium Web", sans-serif;
+  list-style: none;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  align-content: center;
+  text-align: center;
+  list-style-type: none;
+}
+
+.skills {
+  width: 50%;
+  margin: 0 auto;
+  color: rgba(152, 189, 178, 0.808);
+  font-size: 25px;
+}
+
+.skills h2 {
+  align-items: center;
+}
+
+.bar {
+  background: #fffef3;
+  display: block;
+  height: 4px;
+  border: 1.5px solid rgba(182, 206, 199, 0.75);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 154, 214, 0.75);
+}
+
+.bar span {
+  height: 4px;
+  float: left;
+  background: rgba(22, 169, 214, 0.75);
+}
+
+.skills-title {
+  align-items: center;
+  text-align: center;
+}
+
+.html5 {
+  width: 97%;
+  animation: html5 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.css3 {
+  width: 90%;
+  animation: css3 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.javascript {
+  width: 70%;
+  animation: javascript 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.node {
+  width: 65%;
+  animation: node 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.react {
+  width: 70%;
+  animation: react 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.vue {
+  width: 70%;
+  animation: react 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.photoshop {
+  width: 90%;
+  animation: photoshop 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-duration: infinite;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes html5 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 97%;
+  }
+}
+
+@keyframes css3 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes node {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes vue {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes photoshop {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+/* Portfolio */
+
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  /*margin: auto;
+  margin-bottom: 50px;*/
+}
+
+.media {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.media p {
+  align-content: center;
+  text-align: center;
+  font-size: 45px;
+}
+
+.media span {
+  font-style: bold;
+  color: white;
+}
+
+.media:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 300%;
+  width: 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .overlay {
+  opacity: 2;
+}
+
+img {
+  width: 300;
+  z-index: 1;
+  margin: auto;
+  transform: scale(1);
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover img {
+  transform: scale(1.1);
+  filter: var(--overlay-color);
+}
+
+.image-details {
+  text-align: center;
+  color: rgba(22, 169, 214, 0.75);
+  font-size: 70px;
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.media:hover .image-details {
+  top: 40%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .media {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+/* Contact form */
+
+nav {
+  background: #ffffff;
+}
+
+nav h1 {
+  align-items: center;
+  text-align: center;
+  color: rgba(22, 169, 214, 0.75);
+  font-size: 55px;
+}
+
+form {
+  max-width: 700px;
+  margin: 100px auto;
+}
+
+.labels {
+  font-family: "Titillium Web", sans-serif;
+  color: rgba(152, 189, 178, 0.808);
+  font-weight: bold;
+  font-size: 25px;
+  align-items: center;
+  scroll-padding-block-end: 40%;
+}
+
+.feedback-input {
+  color: rgba(22, 169, 214, 0.75);
+  font-family: "Titillium Web", sans-serif;
+  font-display: bold;
+  font-weight: 500;
+  font-size: 25px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid rgba(22, 169, 214, 0.75);
+  column-rule-style: bold;
+  transition: all 0.3s;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid rgb(4, 240, 240);
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Titillium Web", sans-serif;
+  width: 100%;
+  background: rgba(22, 169, 214, 0.75);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: rgb(4, 240, 240);
+}
+
+.skills h2 {
+  align-items: center;
+  text-justify: auto;
+  position: static;
+  left: 70%;
+  right: 70%;
+}
